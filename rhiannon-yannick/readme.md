@@ -4,10 +4,12 @@ _Your README.md must include:_
 ```md
 # Project Name
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Author**: Yannick Aspesberro && Rhiannon Mortensen
+**Version**: 1.0.0
 
 ## Overview
+Installation of NPM PostgreSQL package in server.js . Located UName and password for both Windows and Mac users to connect functioning code and data base to server for real-time updating when server is up and running. Changed articleView to removed any JSON exports. Finished SQL query to update and delete articles. Studied each new route and commented where answers wherever prompted.
+
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
 
 ## Getting Started
