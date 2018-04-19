@@ -105,35 +105,33 @@ articleView.create = () => {
   });
 
   $('#export-field').show();
-  // $('#article-json').val(`${JSON.stringify(article)},`);
-};
 
-articleView.submit = event => {
-  event.preventDefault();
-  let article = new Article({
-    title: $('#article-title').val(),
-    author: $('#article-author').val(),
-    authorUrl: $('#article-author-url').val(),
-    category: $('#article-category').val(),
-    body: $('#article-body').val(),
-    publishedOn: new Date().toISOString()
-  });
+  articleView.submit = event => {
+    event.preventDefault();
+    let article = new Article({
+      title: $('#article-title').val(),
+      author: $('#article-author').val(),
+      authorUrl: $('#article-author-url').val(),
+      category: $('#article-category').val(),
+      body: $('#article-body').val(),
+      publishedOn: new Date().toISOString()
+    });
 
-  article.insertRecord();
-}
+    article.insertRecord();
+  }
 
-articleView.initIndexPage = () => {
-  Article.all.forEach(article => {
-    $('#articles').append(article.toHtml())
-  });
+  articleView.initIndexPage = () => {
+    Article.all.forEach(article => {
+      $('#articles').append(article.toHtml())
+    });
 
-  articleView.populateFilters();
-  articleView.handleCategoryFilter();
-  articleView.handleAuthorFilter();
-  articleView.handleMainNav();
-  articleView.setTeasers();
+    articleView.populateFilters();
+    articleView.handleCategoryFilter();
+    articleView.handleAuthorFilter();
+    articleView.handleMainNav();
+    articleView.setTeasers();
 
-  $('pre code').each(function (i, block) {
-    hljs.highlightBlock(block);
-  });
-};
+    $('pre code').each(function (i, block) {
+      hljs.highlightBlock(block);
+    });
+  };
