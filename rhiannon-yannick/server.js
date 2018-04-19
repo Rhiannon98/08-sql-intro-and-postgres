@@ -23,7 +23,7 @@ client.connect();
 
 // REVIEW: Install the middleware plugins so that our app can parse the request body
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
 app.use(express.static('./public'));
 
 
@@ -39,7 +39,7 @@ app.get('/new', (request, response) => {
 app.get('/articles', (request, response) => {
   // COMMENT: What number(s) of the full-stack-diagram.png image correspond to the following line of code? Which method of article.js is interacting with this particular piece of `server.js`? What part of CRUD is being enacted/managed by this particular piece of code?
   // n.3 of the pic. there is a query method being applied to create rows on the result, otherwise it would throw an error. in crud this one would be update because it updates the data query (result.rows add a row to the query)
-  client.query('SELECT * FROM articles')
+  client.query(`SELECT * FROM articles;`)
     .then(function (result) {
       response.send(result.rows);
     })
@@ -148,7 +148,7 @@ app.listen(PORT, () => {
 function loadArticles() {
   // COMMENT: What number(s) of the full-stack-diagram.png image correspond to the following line of code? Which method of article.js is interacting with this particular piece of `server.js`? What part of CRUD is being enacted/managed by this particular piece of code?
   // same as the loadArticles from a previous lab, the only difference is that it is replacing any json functions within articleView because we do not want anyone to have access to the database or have the ability to access the db
-  client.query('SELECT COUNT(*) FROM articles')
+  client.query(`SELECT COUNT(*) FROM articles;`)
     .then(result => {
       // REVIEW: result.rows is an array of objects that PostgreSQL returns as a response to a query.
       // If there is nothing on the table, then result.rows[0] will be undefined, which will make count undefined. parseInt(undefined) returns NaN. !NaN evaluates to true.
