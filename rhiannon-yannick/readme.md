@@ -10,20 +10,25 @@ _Your README.md must include:_
 ## Overview
 Installation of NPM PostgreSQL package in server.js . Located UName and password for both Windows and Mac users to connect functioning code and data base to server for real-time updating when server is up and running. Changed articleView to removed any JSON exports. Finished SQL query to update and delete articles. Studied each new route and commented where answers wherever prompted.
 
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
-
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+- ensure that you read the README.md made by Code Fellows to install and understand what needs to be installed in order for this to work
+- start up your server after you have cd'ed into our file and opened up our index.html and new.html
+- have some fun typing articles and having them turn up in both the database and be shown in the index.html filters and the page itself.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+HTML, CSS3, JavaScript, SQL, jQuery, various NPM packages functions, node, PSQL server language, handlebars, AJAX, and various other library functions if I am forgetting any.
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+04-19-2018 11:45am - Application now has a fully-functional express server, with GET and POST routes for mac and windows OS
+
+04-19-2018 2:00pm - Application bugs, commented out code, and documentaion completed.
+
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
+google.com
+Nicholas Carignan
+John Cokos
+Noah Gribbin
+Melonie Downing
 ```
