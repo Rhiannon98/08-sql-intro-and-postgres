@@ -23,7 +23,7 @@ client.connect();
 
 // REVIEW: Install the middleware plugins so that our app can parse the request body
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 
@@ -124,7 +124,7 @@ app.delete('/articles', (request, response) => {
   // COMMENT: What number(s) of the full-stack-diagram.png image correspond to the following line of code? Which method of article.js is interacting with this particular piece of `server.js`? What part of CRUD is being enacted/managed by this particular piece of code?
   // this one only targets the articles and will delete all articles, returns a response of complete or an error if incomplete
   client.query(
-    `DELETE (*) FROM articles`
+    `DELETE * FROM articles`
   )
     .then(() => {
       response.send('Delete complete')
